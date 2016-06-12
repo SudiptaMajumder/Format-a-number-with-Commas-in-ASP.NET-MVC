@@ -1,6 +1,6 @@
 # Format-a-number-with-Commas-in-ASP.NET-MVC
 
-In the view page (.chtml) I have used this :
+In the view page (.cshtml) I have used this :
 
 if (item.AMOUNT < 0)//Determine negative number
 {
@@ -20,15 +20,13 @@ else
  =============================================================================================
  In the CLASS Folder there are ComminAmount Class and this class hold inner method like this 'AmountwithComma method':
  (CommainAmount.cs)
-   public static string AmountwithComma(string CVal)
-  {
-
+   
+   
+    public static string AmountwithComma(string CVal)
+    {
             string value = "", gotpoint = "", commainvalue = "", firstpart = "", secondpart = "", thirdpart = "", fourthpart = "", finalvalue = "";
             int lengthdebit = CVal.Length;
-          
-
-          
-          
+            
             for (int i = 0; i < lengthdebit; i++)
             {
                 if (CVal[i] == '.')
@@ -58,7 +56,6 @@ else
                     value = new string(value.ToCharArray().Reverse().ToArray());
                     firstpart = value.Substring(0, 3);
                     secondpart = value.Substring(3, 2);
-
                     thirdpart = value.Substring(5, valuelength - 5);
                     finalvalue = firstpart + "," + secondpart + "," + thirdpart;
                     finalvalue = new string(finalvalue.ToCharArray().Reverse().ToArray());
@@ -68,8 +65,6 @@ else
                 {
                     value = new string(value.ToCharArray().Reverse().ToArray());
                     firstpart = value.Substring(0, 3);
-
-
                     secondpart = value.Substring(3, valuelength - 3);
                     finalvalue = firstpart + "," + secondpart;
                     finalvalue = new string(finalvalue.ToCharArray().Reverse().ToArray());
@@ -85,12 +80,9 @@ else
             {
                 finalvalue = CVal;
             }
-
-
             return finalvalue;
-
-        }
-  }
+     }
+  
 
 
 That's it. Enjoy your code. Thank you.
