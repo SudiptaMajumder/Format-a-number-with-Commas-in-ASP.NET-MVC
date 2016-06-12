@@ -2,19 +2,19 @@
 
 In the view page (.cshtml) I have used this :
 
-if (item.AMOUNT < 0)//Determine negative number
-{
-        item.CREDITAMT = item.CREDITAMT * (-1);// make that positive
+    if (AMOUNT < 0)//Determine negative number
+    {
+        AMOUNT = AMOUNT * (-1);// make that positive
         ccheck = 1;// Flag for negative check
-        string convert = Convert.ToString(item.AMOUNT);
-        creditamt = CommainAmount.AmountwithComma(convert);// This link up with DataAccess Folder
-}
-else
- {
+        string convert = Convert.ToString(AMOUNT);
+        creditamt = CommainAmount.AmountwithComma(convert); // This is line up with CommainAmount.cs Class
+    }
+    else
+    {
         ccheck = 0;//flag for positive check
-        string convert = Convert.ToString(item.AMOUNT);
-        creditamt = CommainAmount.AmountwithComma(convert);// This link up with DataAccess Folder
- }
+        string convert = Convert.ToString(AMOUNT);
+        creditamt = CommainAmount.AmountwithComma(convert);// This is line up with CommainAmount.cs Class
+    }
  
  
  =============================================================================================
